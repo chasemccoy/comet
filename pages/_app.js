@@ -1,8 +1,10 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
 import App, { Container } from 'next/app'
-import { CSSReset } from '@chasemccoy/kit'
+import { CSSReset, theme } from '@chasemccoy/kit'
 import Head from 'next/head'
 import Layout from '../components/Layout'
+import GlobalCSS from '../components/GlobalCSS'
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -25,11 +27,16 @@ export default class MyApp extends App {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         </Head>
 
-        <CSSReset />
+        <ThemeProvider theme={theme}>
+          <>
+            <CSSReset />
+            <GlobalCSS />
 
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </>
+        </ThemeProvider>
       </Container>
     )
   }

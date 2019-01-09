@@ -643,9 +643,9 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@chasemccoy/kit@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@chasemccoy/kit/-/kit-0.4.1.tgz#a755bda420a0155113c72743c1bd83c168ccb3bc"
+"@chasemccoy/kit@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@chasemccoy/kit/-/kit-0.4.2.tgz#e00f3253854dfb773f62c1769ab8c2ee7f192e6d"
   dependencies:
     styled-system "^3.1.11"
 
