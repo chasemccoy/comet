@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, UnorderedList, Box, Heading} from '@chasemccoy/kit'
 import { getWeather, getFeedbinEntries, getHyperlist } from '../utils/data'
 import RSS from '../components/RSS'
+import Link from '../components/Link'
 
 const Index = props => (
   <React.Fragment>
@@ -28,7 +29,7 @@ const Index = props => (
               <Box mb={16} key={i}>
                 <RSS.Entry title={entry.title} url={entry.url} mb='4px' />
                 <Text.p fontSize={14}>
-                  <a 
+                  <Link 
                     href={`http://twitter.com/${entry.twitter_username}/status/${entry.twitter_id}`} 
                     css={`
                       text-decoration: none; 
@@ -36,7 +37,7 @@ const Index = props => (
                     `}
                   >
                     source →
-                  </a>
+                  </Link>
                 </Text.p>
               </Box>
             ))
