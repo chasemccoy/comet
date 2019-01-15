@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Box, Text } from '@chasemccoy/kit'
 
-const Entry = ({ title, url }) => (
-  <Box as='li' mb={16}>
+const Entry = ({ title, url, ...props }) => (
+  <Box as='li' {...props}>
     <a href={url} css={`
       word-wrap: break-word; 
       text-decoration: none; 
@@ -11,7 +11,7 @@ const Entry = ({ title, url }) => (
     `}>
       {title}
       {title && <br />}
-      <Text.span fontSize={16} color='#999'>{url}</Text.span>
+      <Text.span color='#999'>{url}</Text.span>
     </a>
   </Box>
 )

@@ -1,11 +1,18 @@
 import fetch from 'isomorphic-fetch'
 
-export const getWeather = async () => {
-  const res = await fetch('https://chs-stats.now.sh/weather')
+const getJSONResponse = async (url) => {
+  const res = await fetch(url)
   return await res.json()
 }
 
+export const getWeather = async () => {
+  return getJSONResponse('https://chs-stats.now.sh/weather')
+}
+
 export const getFeedbinEntries = async () => {
-  const res = await fetch('https://chs-stats.now.sh/feedbin')
-  return await res.json()
+  return getJSONResponse('https://chs-stats.now.sh/feedbin')
+}
+
+export const getHyperlist = async () => {
+  return getJSONResponse('https://chs-stats.now.sh/hyperlist')
 }

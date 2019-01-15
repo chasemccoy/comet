@@ -2,7 +2,7 @@
   "name": "comet",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 4400",
     "build": "next build",
     "start": "next start",
     "deploy": "now && now alias"
