@@ -9,7 +9,7 @@ const Index = props => (
     {/* <Text mb={40}>Weather: {props.temperature} {props.weatherSummary}</Text> */}
 
     <Box display='flex' flexWrap='wrap'>
-      <Box width={[1, 1, 1/2, 1/3, 1/4]}>
+      <Box width={[1, 1, 1/2, 1/3, 1/4]} pr={[0, 24, 24, 32]} mb={[40, 0]}>
         <Heading.h1 fontSize='18px' mb={16}>Feedbin</Heading.h1>
         <UnorderedList width={1/16}>
           {props.feedbin.entries
@@ -21,7 +21,7 @@ const Index = props => (
         </UnorderedList>
       </Box>
 
-      <Box width={[1, 1, 1/2, 1/3, 1/4]}>
+      <Box width={[1, 1, 1/2, 1/3, 1/4]} pl={[0, 24, 24, 32]}>
         <Heading.h1 fontSize='18px' mb={16}>Hyperlist</Heading.h1>
         <UnorderedList width={1/16}>
           {props.hyperlist
