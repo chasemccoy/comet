@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, UnorderedList, Box, Heading} from '@chasemccoy/kit'
+import { Text, UnorderedList, Box, Heading, Grid } from '@chasemccoy/kit'
 import { getWeather, getFeedbinEntries, getHyperlist } from '../utils/data'
 import RSS from '../components/RSS'
 import Link from '../components/Link'
@@ -8,7 +8,7 @@ const Index = props => (
   <React.Fragment>
     {/* <Text mb={40}>Weather: {props.temperature} {props.weatherSummary}</Text> */}
 
-    <Box display='flex' flexWrap='wrap'>
+    <Grid>
       <Box width={[1, 1, 1/2, 1/3, 1/4]} pr={[0, 24, 24, 32]} mb={[40, 0]}>
         <Heading.h1 fontSize='18px' mb={16}>Feedbin</Heading.h1>
         <UnorderedList width={1/16}>
@@ -44,7 +44,7 @@ const Index = props => (
           }
         </UnorderedList>
       </Box>
-    </Box>
+    </Grid>
   </React.Fragment>
 )
 
