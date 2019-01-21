@@ -6,10 +6,10 @@ const GlobalCSS = createGlobalStyle`
     font-family: ${p => p.theme.fonts.system};
 
     position: relative;
-    padding-right: 40px;
+    padding-left: 40px;
     
     ${p => media(p).small`
-      padding-right: 0;
+      padding-left: 0;
       padding-top: 40px;
     `}
 
@@ -17,7 +17,7 @@ const GlobalCSS = createGlobalStyle`
       content: "";
       position: absolute;
       top: 0;
-      right: 0;
+      left: 0;
       bottom: 0;
       width: 40px;
 
@@ -53,7 +53,7 @@ const GlobalCSS = createGlobalStyle`
         white;
 
       ${p => media(p).small`
-        left: 0;
+        right: 0;
         bottom: unset;
         width: 100%;
         height: 40px;
