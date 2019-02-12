@@ -6,7 +6,7 @@ const Container = styled(Box)`
 `
 
 const Layout = ({ children }) => (
-  <Container p={[12, 16, 24, 32]}>
+  <Container py={[16, 24, 32, 40]} px={[16, 24, 40, 48]}>
     {children}
   </Container>
 )

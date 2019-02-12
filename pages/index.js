@@ -10,7 +10,7 @@ const Index = props => (
 
     <Grid>
       <Box width={[1, 1, 1/2, 1/3, 1/4]} pr={[0, 24, 24, 32]} mb={[40, 0]}>
-        <Heading.h1 fontSize='18px' mb={16}>Feedbin</Heading.h1>
+        <Heading.h1 fontSize='18px' mb={16}>RSS</Heading.h1>
         <UnorderedList width={1/16}>
           {props.feedbin.entries
             .filter(entry => entry.feed_id !== 1383365)
@@ -22,7 +22,7 @@ const Index = props => (
       </Box>
 
       <Box width={[1, 1, 1/2, 1/3, 1/4]} pl={[0, 24, 24, 32]}>
-        <Heading.h1 fontSize='18px' mb={16}>Hyperlist</Heading.h1>
+        <Heading.h1 fontSize='18px' mb={16}>Twitter</Heading.h1>
         <UnorderedList width={1/16}>
           {props.hyperlist
             .map((entry, i) => (

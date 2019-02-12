@@ -1,17 +1,40 @@
 import { createGlobalStyle } from 'styled-components'
 import { media } from '@chasemccoy/kit'
 
+const TRIM_WIDTH = '80px'
+const COLOR_1 = 'tomato'
+const COLOR_2 = 'dodgerblue'
+const COLOR_3 = '#7AB6F0'
+
 const GlobalCSS = createGlobalStyle`
   body {
     font-family: ${p => p.theme.fonts.system};
-
     position: relative;
-    padding-left: 40px;
+    padding-left: ${TRIM_WIDTH};
     
     ${p => media(p).small`
       padding-left: 0;
-      padding-top: 40px;
+      padding-top: ${TRIM_WIDTH};
     `}
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: ${TRIM_WIDTH};
+      height: ${TRIM_WIDTH};
+
+      background: url("/static/logo.png") white;
+      background-repeat: no-repeat;
+      background-size: 56px 56px;
+      background-position: center;
+
+      ${p => media(p).small`
+        top: 0;
+        left: 16px;
+      `}
+    }
 
     &:before {
       content: "";
@@ -19,36 +42,36 @@ const GlobalCSS = createGlobalStyle`
       top: 0;
       left: 0;
       bottom: 0;
-      width: 40px;
-
-      background:
-        repeating-linear-gradient(
-          45deg,
-          dodgerblue 0,
-          dodgerblue 13%,
-          transparent 13%,
-          transparent 26%,
-          tomato 26%,
-          tomato 39%,
-          transparent 39%,
-          transparent 50%,
-        ),
-        white;
+      width: ${TRIM_WIDTH};
 
       background:
         repeating-linear-gradient(
           -45deg,
           transparent 0,
           transparent 25%,
-          dodgerblue 0,
-          dodgerblue 50%
+          ${COLOR_2} 0,
+          ${COLOR_2} 50%
+        ),
+        linear-gradient(
+          -45deg,
+          transparent 10%, 
+          ${COLOR_3} 10%, 
+          ${COLOR_3} 15%, 
+          transparent 15%
+        ),
+        linear-gradient(
+          -45deg,
+          transparent 60%, 
+          ${COLOR_3} 60%, 
+          ${COLOR_3} 65%, 
+          transparent 65%
         ),
         repeating-linear-gradient(
           45deg,
           transparent 0,
           transparent 25%,
-          tomato 0,
-          tomato 50%
+          ${COLOR_1} 0,
+          ${COLOR_1} 50%
         ),
         white;
 
@@ -56,11 +79,11 @@ const GlobalCSS = createGlobalStyle`
         right: 0;
         bottom: unset;
         width: 100%;
-        height: 40px;
+        height: ${TRIM_WIDTH};
       `}
 
       background-blend-mode: multiply;
-      background-size: 40px 40px;
+      background-size: ${TRIM_WIDTH} ${TRIM_WIDTH};
     }
   }
 `
