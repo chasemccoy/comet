@@ -9,6 +9,7 @@ const COLOR_3 = '#7AB6F0'
 const GlobalCSS = createGlobalStyle`
   body {
     font-family: ${p => p.theme.fonts.system};
+    font-size: 16px;
     position: relative;
     padding-left: ${TRIM_WIDTH};
     
