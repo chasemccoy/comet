@@ -8,7 +8,7 @@
     "deploy": "now && now alias"
   },
   "dependencies": {
-    "@chasemccoy/kit": "0.7.0",
+    "@chasemccoy/kit": "0.7.6",
     "isomorphic-fetch": "2.2.1",
     "next": "8.1.0",
     "react": "16.8.6",
